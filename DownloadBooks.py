@@ -1,8 +1,10 @@
 import urllib3
-
+import os
 from pdf.html_to_pdf import get_pdf_from_html
 from util.banner import *
 from listData.downloadsList import *
+from dotenv import load_dotenv
+load_dotenv(os.path.join(os.getcwd(), '.env'))
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 urlBook = 'https://learning.oreilly.com/library/view/hands-on-software-engineering/9781838554491/'
@@ -23,7 +25,7 @@ def download_pdfs(list_urls, t):
 
 
 if __name__ == '__main__':
-    print(banner())
-    t = SeleniumDownload()
-    temp = get_all_urls(t, urlBook)
-    download_pdfs(temp, t)
+     print(banner())
+     t = SeleniumDownload()
+     temp = get_all_urls(t, urlBook)
+     download_pdfs(temp, t)

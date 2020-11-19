@@ -42,9 +42,9 @@ class SeleniumDownload:
         chrome_options.add_argument("--disable-ipv6")
         chrome_options.add_argument("--allow-http-screen-capture")
         chrome_options.add_argument("--start-maximized")
-        chrome_options.add_argument('--headless')
+        #chrome_options.add_argument('--headless')
         #chrome_options.add_argument('--disable-gpu')
         chrome_options.add_experimental_option("useAutomationExtension", False)
         chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        chrome_options.add_argument("--disable-infobars")
+        #chrome_options.add_argument("--disable-infobars")
         return chrome_options

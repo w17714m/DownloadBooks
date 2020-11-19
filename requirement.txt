@@ -7,3 +7,5 @@ beautifulsoup4==4.9.3
 urlparse3==1.1
 gevent==20.9.0
 monkey==0.1
+python-dotenv==0.15.0
+webdriver-manager==3.2.2

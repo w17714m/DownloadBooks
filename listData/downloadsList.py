@@ -7,18 +7,20 @@ from seleniumImpl.seleniumInstance import SeleniumDownload
 
 #from selenium.webdriver.chrome.options
 # variables secretas app
-urlToDownload = os.getenv('URL_TO_DOWNLOAD')
-user = os.getenv('USER')
-password = os.getenv('PASSWORD')
+
 
 
 def get_all_urls(session, url):
     temp = []
-
+    urlToDownload = os.getenv('URL_TO_DOWNLOAD')
+    user = os.getenv('USER')
+    password = os.getenv('PASSWORD')
     session.seleniumInstance.implicitly_wait(2)
     if isinstance(session, SeleniumDownload):
 
         session.seleniumInstance.get(urlToDownload)
+
+        time.sleep(10)
 
         # email
         email_element = session.seleniumInstance.find_element_by_name('email')
@@ -28,8 +30,9 @@ def get_all_urls(session, url):
         pass_element = session.seleniumInstance.find_element_by_name('password')
         pass_element.send_keys(password)
 
+        time.sleep(3)
         # button
-        pass_element = session.seleniumInstance.find_element_by_class_name('src-Button-button')
+        pass_element = session.seleniumInstance.find_element_by_class_name('orm-Button-btnContentWrap')
         pass_element.click()
 
         time.sleep(3)
