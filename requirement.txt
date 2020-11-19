@@ -1,0 +1,9 @@
+requests==2.24.0
+colorama==0.4.3
+requests[security]==2.24.0
+Unidecode==1.1.1
+selenium==3.141.0
+beautifulsoup4==4.9.3
+urlparse3==1.1
+gevent==20.9.0
+monkey==0.1
